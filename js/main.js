@@ -46,7 +46,7 @@ function getData() {
             // Define options for styling GeoJSON features on the map
             var geojsonMarkerOptions = {
                 radius: 3,
-                fillColor: "#e25910",
+                fillColor: "#f25910",
                 color: "#c22802",
                 weight: 1,
                 opacity: 1,
