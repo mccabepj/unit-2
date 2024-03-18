@@ -1,0 +1,12 @@
+/*Add CSS styles here*/
+#map {
+    height: 1400px;
+}
+
+#title {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+    font-size: 18px;
+    font-weight: bold;
+}

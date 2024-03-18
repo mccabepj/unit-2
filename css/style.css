@@ -1,12 +1,73 @@
-/*Add CSS styles here*/
-#map {
-    height: 1400px;
+
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
+#map {    
+    height: 500px;    
+    width: 80%;
+    display: inline-block;
+    }
+
+    #panel {    
+        width: 16%;    
+        padding: 20px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        line-height: 42px;
+    }
+
 #title {
-    text-align: center;
     padding: 10px;
     background-color: #f8f8f8;
     font-size: 18px;
     font-weight: bold;
+}
+
+.leaflet-popup-content p {
+    margin: 0.6em 0;
+}
+
+.range-slider {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.step {  
+    width: 20%;  
+}  
+
+.step img {  
+    width: 100%;  
+}  
+
+#forward {  
+    float: right;  
+}  
+
+#reverse {  
+    float: left;  
+}
+
+.slider-label {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+/* Style for checkboxes */
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Style for labels */
+label {
+    margin-right: 15px;
+}
+
+/* Adds some spacing between checkboxes and labels */
+br {
+    line-height: 20px;
 }

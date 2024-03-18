@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-            <title></title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>FARS by CBSA</title>
 
-        <!--put your external stylesheet links here-->
-        <link rel="stylesheet" href="lib/leaflet.css"> <!--Leaflet CSS -->
-        <link rel="stylesheet" href="css/style.css">
+    <!--external stylesheets  -->
+    <link rel="stylesheet" href="lib/leaflet.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Title  -->
+    <div id="title">Fatal Car Crashes by Core Based Statistical Area, 2012-2021</div>
+
+    <!-- map and panel divs -->
+    <div id="map"></div>
+    
+    <!-- Checkboxes -->
+    <div id="checkboxes">
         
-        <!--[if IE<9]>
-            <link rel="stylesheet" href="css/style.ie.css">
-        <![endif]-->
+    </div>
 
-         <!--you can also place internal styles here;
-             place these within <style> tags-->
-        
-    </head>
+    <!-- panel div -->
+    <div id="panel">
+        <datalist id="yearList"></datalist>
+            <!-- Slider input element -->
+         <input id="yearSlider" class="range-slider" type="range" min="0" max="10" value="0">
+    <!-- Other HTML content for the panel -->
+        <!-- other HTML content for the panel -->
+    </div>
 
-    <body>
-
-        <!-- Title at the top of the page -->
-        <div id="title">Fatal Car Crashes by Core Base Statistical Area, 2012-2021</div>
-
-        <!--put your initial page content here-->
-        <div id="map"></div>
-        <!--you can also use this space for internal scripts;
-        place these within <script> tags-->
-
-        <!--put your external script links here-->
-        
-        <script type="text/javascript" src="lib/leaflet-src.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-    </body>
+    <!--  external scripts  -->
+    <script type="text/javascript" src="lib/leaflet-src.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
 </html>
