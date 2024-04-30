@@ -454,7 +454,10 @@ function getData() {
         });
 }
 
-
+function toggleSidePanel() {
+    var sidePanel = document.querySelector('.sidePanel');
+    sidePanel.classList.toggle('show');
+}
 // Execute the createMap function when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     createMap();

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FARS by CBSA</title>
 
     <!--external stylesheets  -->
@@ -10,8 +10,44 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Title  -->
-    <div id="title">Fatal Car Crashes by Core Based Statistical Area, 2012-2021</div>
+    <header>
+        <div class="container">
+            <h1>Traffic Safety Data Explorer</h1>
+            <nav>
+                <ul>
+                    <li class="togglePanelButtonContainer">
+                        <button class="togglePanelButton" onclick="togglePanel()">Info</button>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Maps</a>
+                        <div class="dropdown-content">
+                            <a href="#">Fatal Crashes by Metro Area</a>
+                            <a href="#">Coming soon: VDOT Systemic Initiatives</a>
+                            <a href="#">Coming Soon: VDOT District Crash Trend Analysis</a>
+                        </div>
+                    </li>
+                    <!-- Add more navigation links as needed -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Side panel for narrative text -->
+    <div class="sidePanel" id="sidePanel">
+        <h2>Where am I?</h2>
+        <p>You found the 'Traffic Safety Data Explorer'. Welcome! </p>
+            <p> This name right now is pretty much just a placeholder. For the final project, I would like to develop a 
+                series of interactive maps that can be used by clients and colleagues. Right now mapping the data is pretty much limited to
+                ArcGIS Online, and data is not effectively presented for pretty much any user. I would like to gradually change that.
+            </p>
+            <p>For now, this is data I began developing in GEOG 575 for the early labs. The proportional symbols represent total fatal crashes by metro area. 
+                First note on this is that yes, I need to normalize this data if it is to be interesting. But I needed to submit something and I have been
+                getting in my own way over and over. 
+                <p>Two other bits: the metro area lat/long is determined by the mean center of fatal crashes in each 
+                metro area. I saw this performed for population data once and thought it was cool. I also chose metro areas because I think we might be able to 
+                mitigate our truly incredible traffic safety issues at a regional level rather than arbitrary city or state lines.  </p>
+            </p>
+    </div>
 
     <!-- map and panel divs -->
     <div id="map"></div>
@@ -33,5 +69,11 @@
     <!--  external scripts  -->
     <script type="text/javascript" src="lib/leaflet-src.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        function togglePanel() {
+            var panel = document.getElementById('sidePanel');
+            panel.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
