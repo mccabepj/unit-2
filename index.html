@@ -3,72 +3,61 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FARS by CBSA</title>
-
-    <!--external stylesheets  -->
+    <title>Systemic Initiatives Map</title>
     <link rel="stylesheet" href="lib/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Traffic Safety Data Explorer</h1>
+            <h1><a href="index.html">Traffic Safety Data Explorer</a></h1>
             <nav>
                 <ul>
-                    <li class="togglePanelButtonContainer">
-                        <button class="togglePanelButton" onclick="togglePanel()">Info</button>
-                    </li>
+                    <li><button class="togglePanelButton" onclick="togglePanel()">Chart</button></li>
                     <li class="dropdown">
-                        <a href="#">Maps</a>
+                        <a href="javascript:void(0);">Maps</a>
                         <div class="dropdown-content">
-                            <a href="#">Fatal Crashes by Metro Area</a>
-                            <a href="#">Coming soon: VDOT Systemic Initiatives</a>
-                            <a href="#">Coming Soon: VDOT District Crash Trend Analysis</a>
+                            <a href="SystemicInitiatives.html">VDOT Systemic Initiatives</a>
+                            <a href="FatalCrash_MSA.html">Fatal Crashes by Metro Area</a>
                         </div>
                     </li>
-                    <!-- Add more navigation links as needed -->
                 </ul>
             </nav>
         </div>
     </header>
 
+    <div class="content">
+        <h2>About</h2>
+        <p>This is the homepage for my GEOG 575 Final Project. Here you can find links to interactive maps and infographics related to traffic safety data. <br>In the future, this website will be updated, modified, and enhanced continuously for create tools for safety analysis.</p>
+        <!-- Add more information and links as needed -->
+    </div>
+
     <!-- Side panel for narrative text -->
     <div class="sidePanel" id="sidePanel">
         <h2>Where am I?</h2>
         <p>You found the 'Traffic Safety Data Explorer'. Welcome! </p>
-            <p> This name right now is pretty much just a placeholder. For the final project, I would like to develop a 
-                series of interactive maps that can be used by clients and colleagues. Right now mapping the data is pretty much limited to
-                ArcGIS Online, and data is not effectively presented for pretty much any user. I would like to gradually change that.
-            </p>
-            <p>For now, this is data I began developing in GEOG 575 for the early labs. The proportional symbols represent total fatal crashes by metro area. 
-                First note on this is that yes, I need to normalize this data if it is to be interesting. But I needed to submit something and I have been
-                getting in my own way over and over. 
-                <p>Two other bits: the metro area lat/long is determined by the mean center of fatal crashes in each 
-                metro area. I saw this performed for population data once and thought it was cool. I also chose metro areas because I think we might be able to 
-                mitigate our truly incredible traffic safety issues at a regional level rather than arbitrary city or state lines.  </p>
-            </p>
+        <!-- Add more information as needed -->
     </div>
 
-    <!-- map and panel divs -->
-    <div id="map"></div>
-    
-    <!-- Checkboxes -->
-    <div id="checkboxes">
-        
-    </div>
+    <nav>
+        <ul class="navigation-menu">
+            <li>
+                <a href="SystemicInitiatives.html">
+                    VDOT Systemic Countermeasures: Phase I
+                </a>
+                <span class="link-description">For: <br> Users seeking the locations, status, <br> and progress by VDOT district.</span>
+            </li>
+            <li>
+                <a href="FatalCrash_MSA.html">
+                    National: Fatal Crashes by MSA
+                </a>
+                <span class="link-description">For: <br> Users seeking to compare fatal crash trends at the Metro Area level. <br> In the future, this code will serve as a template for VDOT District crash trends.</span>
+            </li>
+            <!-- Add more list items as needed -->
+        </ul>
+    </nav>
 
-    <!-- panel div -->
-    <div id="panel">
-        <datalist id="yearList"></datalist>
-            <!-- Slider input element -->
-         <input id="yearSlider" class="range-slider" type="range" min="0" max="10" value="0">
-    <!-- Other HTML content for the panel -->
-        <!-- other HTML content for the panel -->
-    </div>
-
-    <!--  external scripts  -->
-    <script type="text/javascript" src="lib/leaflet-src.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
     <script>
         function togglePanel() {
             var panel = document.getElementById('sidePanel');
